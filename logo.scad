@@ -1,11 +1,13 @@
 $fn = 50;
 
 union () {
+    // Ring
     difference() {
         circle(10.5);
         circle(7.5);
     }
 
+    // Inner mark
     rotate([0, 0, 148]) {
         translate([-1.7, -3, 0]) {
             minkowski() {
@@ -24,6 +26,7 @@ union () {
         }
     }
 
+    // Tail
     rotate([0, 0, -136]) {
         translate([1, 13, 0]) {
             minkowski() {
