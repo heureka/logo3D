@@ -29,13 +29,18 @@ color([0.94,0.44,0,1]) {
             }
            
             // Tail
-            rotate([0, 0, -136]) {
-                translate([1, 13, 0]) {
-                    minkowski() {
-                        circle(1.8);
-                        square([0.0001, 6], true);  
-                    }
-                }  
+            difference() {
+                rotate([0, 0, -136]) {
+                    translate([1, 13, 0]) {
+                        minkowski() {
+                            circle(1.8);
+                            square([0.0001, 6], true);  
+                        }
+                    }  
+                };
+                translate([10, -11.75, 0]) {
+                    circle(1.29);
+                }
             }
         }
     }
